@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { AdminComponent } from './admin.component/admin.component';
 import { ClientComponent } from './client.component/client.component';
 import { App } from './app';
+import { NotFoundComponent } from './components/not-found.comonents';
 
 export const routes: Routes = [
     {
@@ -10,11 +11,17 @@ export const routes: Routes = [
         redirectTo: 'client'
     },
     {
-        path: 'andmin',
+        path: 'admin',
         component: AdminComponent,
+        title:'Admin'
     },
     {
         path: 'client',
         component: ClientComponent,
+        title:'Client'
+    },
+    {
+        path: '**',
+        component: NotFoundComponent,
     },
 ]
